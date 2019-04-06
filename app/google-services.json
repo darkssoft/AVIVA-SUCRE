@@ -1,0 +1,35 @@
+{
+  "project_info": {
+    "project_number": "683008397354",
+    "firebase_url": "https://aviva-sucre-36483.firebaseio.com",
+    "project_id": "aviva-sucre-36483",
+    "storage_bucket": "aviva-sucre-36483.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:683008397354:android:ef31cfe391fb909c",
+        "android_client_info": {
+          "package_name": "com.aviva.avivasucre"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGEafelUywYPwYpWJpRj_3etC_kxwIbpA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "683008397354-b1esqvnccp0t6toi3iuuprnt45spjvnm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
