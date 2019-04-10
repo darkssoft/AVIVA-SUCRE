@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     xmlns:app="http://schemas.android.com/apk/res/android"/>
+
     <fragment xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:map="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
@@ -10,24 +13,26 @@
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MapsActivity"/>
-
-    <LinearLayout
+        tools:context=".MapsActivity" />
+    <com.github.clans.fab.FloatingActionMenu
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        app:menu_fab_label="Menú"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true">
+        <com.github.clans.fab.FloatingActionButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:fab_label="matasanos xd"
+            android:src="@drawable/ic_holi"
+            />
+        <com.github.clans.fab.FloatingActionButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:fab_label="pacos jsjs"
+            android:src="@drawable/ic_pacos"
+            />
+    </com.github.clans.fab.FloatingActionMenu>
 
-        <LinearLayout
 
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/button" />
-        </LinearLayout>
-    </LinearLayout>
 </RelativeLayout>

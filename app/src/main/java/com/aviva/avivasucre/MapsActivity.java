@@ -2,8 +2,12 @@ package com.aviva.avivasucre;
 
 import android.app.Activity;
 import android.app.Dialog;
+import android.content.Intent;
+import android.support.design.widget.FloatingActionButton;
+import android.support.transition.Visibility;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.view.View;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
@@ -17,7 +21,6 @@ import com.google.android.gms.maps.model.MarkerOptions;
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,7 +36,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             Dialog dialog=GooglePlayServicesUtil.getErrorDialog(status,(Activity)getApplicationContext(),10);
             dialog.show();
         }
-    }
+    }                                                           
 
 
     /**
