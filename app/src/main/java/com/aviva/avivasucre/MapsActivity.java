@@ -3,29 +3,40 @@ package com.aviva.avivasucre;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Intent;
+import android.content.res.Resources;
+import android.nfc.Tag;
 import android.support.design.widget.FloatingActionButton;
 import android.support.transition.Visibility;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
+import com.bumptech.glide.load.engine.Resource;
+import com.github.clans.fab.FloatingActionMenu;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.UiSettings;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MapStyleOptions;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
+    FloatingActionMenu actionMenu;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.map_layout);
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
+
+        actionMenu=(FloatingActionMenu) findViewById(R.id.fmenu);
+        actionMenu.setClosedOnTouchOutside(true);
 
         int status = GooglePlayServicesUtil.isGooglePlayServicesAvailable(getApplicationContext());
         if (status== ConnectionResult.SUCCESS) {
@@ -36,7 +47,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             Dialog dialog=GooglePlayServicesUtil.getErrorDialog(status,(Activity)getApplicationContext(),10);
             dialog.show();
         }
-    }                                                           
+    }
+    public void ClickMenu1(View view){
+        Intent inten1 = new Intent(MapsActivity.this,PrincipalActivity.class);
+        startActivity(inten1);
+    }
+    public void ClickMenu2(View view){
+
+    }
 
 
     /**
@@ -51,10 +69,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-
         // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        LatLng Sucre = new LatLng(-19.0464292,-65.2526743);
+        LatLng SantaB = new LatLng(-19.044808, -65.263424);
+        LatLng SUni = new LatLng( -19.049010, -65.265912);
+        mMap.addMarker(new MarkerOptions().position(Sucre).title("HOLI"));
+        mMap.addMarker(new MarkerOptions().position(SantaB).title("Holas xd"));
+        mMap.addMarker(new MarkerOptions().position(SUni).title("Holas xd"));
+        float zoom=13;
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Sucre,zoom));
     }
 }
