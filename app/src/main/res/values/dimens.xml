@@ -5,4 +5,9 @@
     <dimen name="nav_header_vertical_spacing">8dp</dimen>
     <dimen name="nav_header_height">176dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="alturaCardView">200dp</dimen>
+    <dimen name="bordeCardView">6dp</dimen>
+    <dimen name="tamañoTextoNombreUsuario">25sp</dimen>
+    <dimen name="tamañoTextoPrimero">15sp</dimen>
+    <dimen name="appbar_padding_top">8dp</dimen>
 </resources>

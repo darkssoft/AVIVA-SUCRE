@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cardview="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fotoCard"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/alturaCardView"
+    cardview:cardCornerRadius="@dimen/bordeCardView"
+    android:layout_marginBottom="@dimen/activity_vertical_margin">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imagenCard"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/alturaCardView"
+            android:background="@drawable/captura"
+            android:scaleType="centerCrop"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="bottom"
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:background="@color/backgroundTexto">
+
+            <TextView
+                android:id="@+id/nombreUsuarioCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nombreUsuario"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/tamañoTextoNombreUsuario"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/primeroCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/primeroCardView"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/tamañoTextoPrimero"/>
+                <TextView
+                    android:id="@+id/tiempoCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tiempoCardView"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/tamañoTextoPrimero"
+                    android:layout_marginLeft="5dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</android.support.v7.widget.CardView>

@@ -44,6 +44,11 @@ public class PrincipalActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
     }
 
+    public void Entrar(View view){
+        Intent intent = new Intent(this, TabbActivity.class);
+        startActivity(intent);
+    }
+
 
 
     @SuppressWarnings("StatementWithEmptyBody")
