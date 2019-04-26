@@ -1,7 +1,9 @@
 package com.aviva.avivasucre.Fragments;
 
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -12,11 +14,13 @@ import android.view.ViewGroup;
 import com.aviva.avivasucre.Adapter.AdapterRecyclerView;
 import com.aviva.avivasucre.Model.Picture;
 import com.aviva.avivasucre.R;
+import com.github.clans.fab.FloatingActionMenu;
 
 import java.util.ArrayList;
 
 public class NoticiasFragment extends Fragment {
 
+    static final int REQUEST_IMAGE_CAPTURE = 1;
 
     public NoticiasFragment() {
         // Required empty public constructor
@@ -36,8 +40,34 @@ public class NoticiasFragment extends Fragment {
 
         AdapterRecyclerView adapterRecyclerView = new AdapterRecyclerView(buidPictures(), R.layout.cardview_picture, getActivity());
         picturesRecycler.setAdapter(adapterRecyclerView);
+
+        FloatingActionMenu actionMenuNoticias = (FloatingActionMenu) view.findViewById(R.id.menuFloatingNoticias);
+        actionMenuNoticias.setClosedOnTouchOutside(true);
+
+
+
         return view;
     }
+    /**
+    public void (View view){
+
+        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+
+        if(intent.resolveActivity(getActivity().getPackageManager()) != null){
+            startActivityForResult(intent, REQUEST_IMAGE_CAPTURE);
+        }
+
+    }
+
+
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data){
+         if(requestCode == REQUEST_IMAGE_CAPTURE && resultCode == getActivity().RESULT_OK){
+
+         }
+    }
+    */
 
     public ArrayList<Picture> buidPictures(){
         ArrayList<Picture> pictures = new ArrayList<>();

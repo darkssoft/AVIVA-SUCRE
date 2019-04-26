@@ -21,6 +21,7 @@ import android.widget.TextView;
 
 import com.aviva.avivasucre.Fragments.EventosFragment;
 import com.aviva.avivasucre.Fragments.NoticiasFragment;
+import com.github.clans.fab.FloatingActionMenu;
 
 public class TabbActivity extends AppCompatActivity {
 
@@ -33,7 +34,6 @@ public class TabbActivity extends AppCompatActivity {
      * {@link android.support.v4.app.FragmentStatePagerAdapter}.
      */
     private SectionsPagerAdapter mSectionsPagerAdapter;
-
     /**
      * The {@link ViewPager} that will host the section contents.
      */

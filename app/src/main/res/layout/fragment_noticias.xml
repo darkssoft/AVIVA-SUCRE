@@ -24,14 +24,24 @@
 
     </LinearLayout>
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        android:src="@drawable/agregar"
-        app:backgroundTint="@color/colorAccent" />
+    <com.github.clans.fab.FloatingActionMenu
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/menuFloatingNoticias">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_label="@string/subirGaleria"
+            android:src="@drawable/galeria"/>
+
+        <com.github.clans.fab.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_label="@string/subirCamara"
+            android:src="@drawable/camara" />
+
+    </com.github.clans.fab.FloatingActionMenu>
 
 
 </android.support.design.widget.CoordinatorLayout>

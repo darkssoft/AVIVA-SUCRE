@@ -17,6 +17,7 @@
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="hello_blank_fragment">fragmento 1</string>
     <string name="hello_black_fragment">fragmento 2</string>
-
+    <string name="subirCamara">Subir de la camara</string>
+    <string name="subirGaleria">Subir de la galeria</string>
 
 </resources>
