@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -31,45 +32,48 @@
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="0.7"
+            android:layout_weight="0.8"
             android:orientation="horizontal">
 
             <Button
                 android:id="@+id/mapa"
-                android:layout_width="150dp"
-                android:layout_height="80dp"
+                android:layout_width="132dp"
+                android:layout_height="52dp"
                 android:layout_alignBaseline="@+id/noticias"
                 android:layout_alignBottom="@+id/noticias"
-                android:layout_marginBottom="8dp"
-                android:layout_marginEnd="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
-                android:layout_toLeftOf="@+id/noticias"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
                 android:layout_toStartOf="@+id/noticias"
+                android:layout_toLeftOf="@+id/noticias"
                 android:text="@string/mapa"
                 android:theme="@style/RaisedButton"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.15"
+                app:layout_constraintHorizontal_bias="0.174"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.897" />
 
             <Button
                 android:id="@+id/noticias"
-                android:layout_width="150dp"
-                android:layout_height="80dp"
+                android:layout_width="132dp"
+                android:layout_height="52dp"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
-                android:layout_marginBottom="8dp"
                 android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:onClick="Entrar"
                 android:text="@string/noticias"
                 android:theme="@style/RaisedButton"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.85"
+                app:layout_constraintHorizontal_bias="0.827"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.897" />
 
         </android.support.constraint.ConstraintLayout>
 
@@ -79,11 +83,46 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_weight="0.3">
+            android:layout_weight="0.2"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingBottom="@dimen/activity_vertical_margin">
+
+            <include layout="@layout/cardview_picture"/>
+
+
 
         </RelativeLayout>
 
     </LinearLayout>
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_margin="100dp"
+        android:layout_gravity="bottom"
+        android:id="@+id/galeria"/>
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/menuFloating"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="subirGaleria"
+            android:src="@drawable/galeria"
+            app:fab_label="@string/subirGaleria" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="subirCamara"
+            android:src="@drawable/camara"
+            app:fab_label="@string/subirCamara" />
+
+    </com.github.clans.fab.FloatingActionMenu>
 
 
 
