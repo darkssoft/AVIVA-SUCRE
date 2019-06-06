@@ -151,6 +151,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         ClinicaA = mMap.addMarker(new MarkerOptions().position(LClinicaA).title("Clínica Angeles"));
         GinecoObs = mMap.addMarker(new MarkerOptions().position(LGinecoObs).title("Hospital Gineco Obstétrico"));
         SanCris = mMap.addMarker(new MarkerOptions().position(LSanCris).title("Hospital San Cristobal"));
+        //kikik
         IPTK = mMap.addMarker(new MarkerOptions().position(LIPTK).title("Hospital Popular IPTK"));
         CajaPetro = mMap.addMarker(new MarkerOptions().position(LCajaPetro).title("Caja Petrolera de Salud"));
         Cossmil = mMap.addMarker(new MarkerOptions().position(LCossmil).title("Hospital Cossmil"));
