@@ -14,27 +14,30 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MapsActivity" />
+
     <com.github.clans.fab.FloatingActionMenu
         android:id="@+id/fmenu"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:menu_fab_label="Menú"
+        android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true">
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="4dp"
+        app:menu_fab_label="Menú">
+
         <com.github.clans.fab.FloatingActionButton
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:fab_label="matasanos xd"
-            android:src="@drawable/ic_holi"
             android:onClick="ClickMenu1"
-            />
+            android:src="@drawable/ic_holi"
+            app:fab_label="matasanos xd" />
+
         <com.github.clans.fab.FloatingActionButton
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:fab_label="pacos jsjs"
-            android:src="@drawable/ic_pacos"
             android:onClick="ClickMenu2"
-            />
+            android:src="@drawable/ic_pacos"
+            app:fab_label="pacos jsjs" />
     </com.github.clans.fab.FloatingActionMenu>
 
 
