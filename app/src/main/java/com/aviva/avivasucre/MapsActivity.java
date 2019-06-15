@@ -53,11 +53,18 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     LCiesU = new LatLng(-19.050358, -65.250820),
     LSCies =  new LatLng(-19.049820, -65.246129),
     LClinicaA = new LatLng(-19.045939, -65.267599),
-    LGastro = new LatLng(-19.045733, -65.268157);
+    LGastro = new LatLng(-19.045733, -65.268157),
+    MCampe = new LatLng(-19.033203, -65.253080),
+    ZSPablo = new LatLng(-19.036396, -65.255856),
+    LBSisa = new LatLng(-19.019942, -65.259754),
+    LVillaM = new LatLng(-19.018688, -65.252059),
+    LKKasa = new LatLng(-19.027718, -65.239499),
+    LElRollo = new LatLng(-19.019296, -65.286330),
+    LHRollo= new LatLng(-19.019346, -65.286399);
     FloatingActionMenu actionMenu;
 
     Marker SantaB, Surapata, SUni, MJesusP, CristoAmericas, ClinicaA,
-            GinecoObs, SanCris, IPTK, CajaPetro, Cossmil, LosAng, BancaP, Cies, CKausay, Medicor, HUniv, CruzR, CiesU, SCies, Gastro;
+            GinecoObs, SanCris, IPTK, CajaPetro, Cossmil, LosAng, BancaP,  Cies, CKausay, Medicor, HUniv, CruzR, CiesU, SCies, Gastro, LMCampe, SPablo, BSisa, VillaM, KKaza,ElRollo, HRollo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -99,9 +106,17 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         CiesU.setVisible(true);
         SCies.setVisible(true);
         Gastro.setVisible(true);
+        HRollo.setVisible(true);
 
 
         Surapata.setVisible(false);
+        LMCampe.setVisible(false);
+        SPablo.setVisible(false);
+        BSisa.setVisible(false);
+        VillaM.setVisible(false);
+        KKaza.setVisible(false);
+        ElRollo.setVisible(false);
+
     }
     public void ClickMenu2(View view){
 
@@ -125,8 +140,15 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         CiesU.setVisible(false);
         SCies.setVisible(false);
         Gastro.setVisible(false);
+        HRollo.setVisible(false);
 
         Surapata.setVisible(true);
+        LMCampe.setVisible(true);
+        SPablo.setVisible(true);
+        BSisa.setVisible(true);
+        VillaM.setVisible(true);
+        KKaza.setVisible(true);
+        ElRollo.setVisible(true);
     }
 
     /**
@@ -144,27 +166,33 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         // Add a marker in Sydney and move the camera -19.053620, -65.262147
 
         SantaB=mMap.addMarker(new MarkerOptions().position(LSantaB).title("Santa Barbara").icon(BitmapDescriptorFactory.fromResource(R.drawable.hospital_5)));
-        SUni=mMap.addMarker(new MarkerOptions().position(LSUni).title("Seguro Universitario"));
-        Surapata=mMap.addMarker(new MarkerOptions().position(MSurapata).title("Modulo Surapata"));
-        MJesusP = mMap.addMarker(new MarkerOptions().position(LMJesusP).title("Hospital Monseñor Jesus Perez"));
-        CristoAmericas = mMap.addMarker(new MarkerOptions().position(LCristoAmericas).title("Cristo de las Americas"));
-        ClinicaA = mMap.addMarker(new MarkerOptions().position(LClinicaA).title("Clínica Angeles"));
-        GinecoObs = mMap.addMarker(new MarkerOptions().position(LGinecoObs).title("Hospital Gineco Obstétrico"));
-        SanCris = mMap.addMarker(new MarkerOptions().position(LSanCris).title("Hospital San Cristobal"));
-        //kikik
-        IPTK = mMap.addMarker(new MarkerOptions().position(LIPTK).title("Hospital Popular IPTK"));
-        CajaPetro = mMap.addMarker(new MarkerOptions().position(LCajaPetro).title("Caja Petrolera de Salud"));
-        Cossmil = mMap.addMarker(new MarkerOptions().position(LCossmil).title("Hospital Cossmil"));
-        LosAng = mMap.addMarker(new MarkerOptions().position(LLosAng).title("Hospital los Angeles"));
-        BancaP = mMap.addMarker(new MarkerOptions().position(LBancaP).title("Caja de Salud de la Banca Privada"));
-        Cies = mMap.addMarker(new MarkerOptions().position(LCies).title("CIES"));
-        CKausay = mMap.addMarker(new MarkerOptions().position(LCKausay).title("Clinicade Salud Integral Kawsay Pujyu"));
-        Medicor = mMap.addMarker(new MarkerOptions().position(LMedicor).title("Medicor"));
-        HUniv = mMap.addMarker(new MarkerOptions().position(LHUniv).title("Hospital Universitario"));
-        CruzR = mMap.addMarker(new MarkerOptions().position(LCruzR).title("Cruz Roja"));
-        CiesU = mMap.addMarker(new MarkerOptions().position(LCiesU).title("CIES Umosas Sucre"));
-        SCies = mMap.addMarker(new MarkerOptions().position(LSCies).title("Sucursal CIES San Antonio"));
-        Gastro = mMap.addMarker(new MarkerOptions().position(LGastro).title("Hospital Gastroenterológico Boliviano-Japonés"));
+        SUni=mMap.addMarker(new MarkerOptions().position(LSUni).title("Seguro Universitario").icon(BitmapDescriptorFactory.fromResource(R.drawable.hospital_5)));
+        HRollo=mMap.addMarker(new MarkerOptions().position(LHRollo).title("Seguro Universitario").icon(BitmapDescriptorFactory.fromResource(R.drawable.hospital_5)));
+        MJesusP = mMap.addMarker(new MarkerOptions().position(LMJesusP).title("Hospital Monseñor Jesus Perez").icon(BitmapDescriptorFactory.fromResource(R.drawable.hospital_5)));
+        CristoAmericas = mMap.addMarker(new MarkerOptions().position(LCristoAmericas).title("Cristo de las Americas").icon(BitmapDescriptorFactory.fromResource(R.drawable.hospital_5)));
+        ClinicaA = mMap.addMarker(new MarkerOptions().position(LClinicaA).title("Clínica Angeles").icon(BitmapDescriptorFactory.fromResource(R.drawable.hospital_5)));
+        GinecoObs = mMap.addMarker(new MarkerOptions().position(LGinecoObs).title("Hospital Gineco Obstétrico").icon(BitmapDescriptorFactory.fromResource(R.drawable.hospital_5)));
+        SanCris = mMap.addMarker(new MarkerOptions().position(LSanCris).title("Hospital San Cristobal").icon(BitmapDescriptorFactory.fromResource(R.drawable.hospital_5)));
+        IPTK = mMap.addMarker(new MarkerOptions().position(LIPTK).title("Hospital Popular IPTK").icon(BitmapDescriptorFactory.fromResource(R.drawable.hospital_5)));
+        CajaPetro = mMap.addMarker(new MarkerOptions().position(LCajaPetro).title("Caja Petrolera de Salud").icon(BitmapDescriptorFactory.fromResource(R.drawable.hospital_5)));
+        Cossmil = mMap.addMarker(new MarkerOptions().position(LCossmil).title("Hospital Cossmil").icon(BitmapDescriptorFactory.fromResource(R.drawable.hospital_5)));
+        LosAng = mMap.addMarker(new MarkerOptions().position(LLosAng).title("Hospital los Angeles").icon(BitmapDescriptorFactory.fromResource(R.drawable.hospital_5)));
+        BancaP = mMap.addMarker(new MarkerOptions().position(LBancaP).title("Caja de Salud de la Banca Privada").icon(BitmapDescriptorFactory.fromResource(R.drawable.hospital_5)));
+        Cies = mMap.addMarker(new MarkerOptions().position(LCies).title("CIES").icon(BitmapDescriptorFactory.fromResource(R.drawable.hospital_5)));
+        CKausay = mMap.addMarker(new MarkerOptions().position(LCKausay).title("Clinicade Salud Integral Kawsay Pujyu").icon(BitmapDescriptorFactory.fromResource(R.drawable.hospital_5)));
+        Medicor = mMap.addMarker(new MarkerOptions().position(LMedicor).title("Medicor").icon(BitmapDescriptorFactory.fromResource(R.drawable.hospital_5)));
+        HUniv = mMap.addMarker(new MarkerOptions().position(LHUniv).title("Hospital Universitario").icon(BitmapDescriptorFactory.fromResource(R.drawable.hospital_5)));
+        CruzR = mMap.addMarker(new MarkerOptions().position(LCruzR).title("Cruz Roja").icon(BitmapDescriptorFactory.fromResource(R.drawable.hospital_5)));
+        CiesU = mMap.addMarker(new MarkerOptions().position(LCiesU).title("CIES Umosas Sucre").icon(BitmapDescriptorFactory.fromResource(R.drawable.hospital_5)));
+        SCies = mMap.addMarker(new MarkerOptions().position(LSCies).title("Sucursal CIES San Antonio").icon(BitmapDescriptorFactory.fromResource(R.drawable.hospital_5)));
+        Gastro = mMap.addMarker(new MarkerOptions().position(LGastro).title("Hospital Gastroenterológico Boliviano-Japonés").icon(BitmapDescriptorFactory.fromResource(R.drawable.hospital_5)));
+        Surapata=mMap.addMarker(new MarkerOptions().position(MSurapata).title("Modulo Surapata").icon(BitmapDescriptorFactory.fromResource(R.drawable.police)));
+        LMCampe = mMap.addMarker(new MarkerOptions().position(MCampe).title("Modulo Policial Mercado Campesino").icon(BitmapDescriptorFactory.fromResource(R.drawable.police)));
+        SPablo = mMap.addMarker(new MarkerOptions().position(ZSPablo).title("Modulo Policial Zona San Pablo Av. German Mendoza").icon(BitmapDescriptorFactory.fromResource(R.drawable.police)));
+        BSisa = mMap.addMarker(new MarkerOptions().position(LBSisa).title("Modulo Policial Av. Circunvalacion, Barrio Bartolina Sisa").icon(BitmapDescriptorFactory.fromResource(R.drawable.police)));
+        VillaM = mMap.addMarker(new MarkerOptions().position(LVillaM).title("Modulo Policial Villa Margarita, Av Circulvalacion").icon(BitmapDescriptorFactory.fromResource(R.drawable.police)));
+        KKaza = mMap.addMarker(new MarkerOptions().position(LKKasa).title("modulo Policial Zona Kopa Kasa, Barrio Vida Nueva").icon(BitmapDescriptorFactory.fromResource(R.drawable.police)));
+        ElRollo= mMap.addMarker(new MarkerOptions().position(LElRollo).title("modulo Policial Zona Kopa Kasa, Barrio Vida Nueva").icon(BitmapDescriptorFactory.fromResource(R.drawable.police)));
         float zoom=13;
 
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(LSucre,zoom));
