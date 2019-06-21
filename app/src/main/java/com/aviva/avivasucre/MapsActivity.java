@@ -14,6 +14,7 @@ import android.os.Bundle;
 import android.transition.Visibility;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 
 import com.bumptech.glide.load.engine.Resource;
 import com.github.clans.fab.FloatingActionMenu;
@@ -65,6 +66,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             LElRollo = new LatLng(-19.019296, -65.286330),
             LHRollo = new LatLng(-19.019346, -65.286399);
     FloatingActionMenu actionMenu;
+    private Button Bllamar,Bllegar,Binfo;
 
     Marker SantaB, Surapata, SUni, MJesusP, CristoAmericas, ClinicaA,
             GinecoObs, SanCris, IPTK, CajaPetro, Cossmil, LosAng, BancaP, Cies, CKausay, Medicor, HUniv, CruzR, CiesU, SCies, Gastro, LMCampe, SPablo, BSisa, VillaM, KKaza, ElRollo, HRollo;
@@ -77,6 +79,22 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         actionMenu = (FloatingActionMenu) findViewById(R.id.fmenu);
         actionMenu.setClosedOnTouchOutside(true);
+
+        Bllamar = (Button) findViewById(R.id.llamar);
+        Bllamar.setVisibility(View.INVISIBLE);
+        Bllamar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+
+        Bllegar = (Button) findViewById(R.id.button3);
+        Bllegar.setVisibility(View.INVISIBLE);
+        Binfo = (Button) findViewById(R.id.info);
+        Binfo.setVisibility(View.INVISIBLE);
+
 
         int status = GooglePlayServicesUtil.isGooglePlayServicesAvailable(getApplicationContext());
         if (status == ConnectionResult.SUCCESS) {
@@ -168,7 +186,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-        // Add a marker in Sydney and move the camera -19.053620, -65.262147
 
         SantaB = mMap.addMarker(new MarkerOptions().position(LSantaB).title("Santa Barbara").icon(BitmapDescriptorFactory.fromResource(R.drawable.hospital_5)));
         SUni = mMap.addMarker(new MarkerOptions().position(LSUni).title("Seguro Universitario").icon(BitmapDescriptorFactory.fromResource(R.drawable.hospital_5)));
@@ -212,6 +229,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             return;
         }
         mMap.setMyLocationEnabled(true);
+
 
 
     }

@@ -2,7 +2,7 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/relativeLayout5"
+    android:id="@+id/ConstrainLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"><![CDATA[
     xmlns:app="http://schemas.android.com/apk/res/android"/>
@@ -65,7 +65,7 @@
     </com.github.clans.fab.FloatingActionMenu>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Info"
@@ -77,7 +77,7 @@
         app:layout_constraintVertical_bias="0.39" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/llamar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Llamar"
@@ -92,7 +92,7 @@
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="llegar"
+        android:text="Llegar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
